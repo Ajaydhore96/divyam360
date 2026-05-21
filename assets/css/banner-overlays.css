@@ -595,3 +595,162 @@
     display: flex;
     align-items: center;
 }
+
+
+/* PWA MOBILE APP STYLES */
+@media (max-width: 768px) {
+    /* Remove default mobile browser chrome for app-like experience */
+    body {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    
+    /* Smooth scrolling for app feel */
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Better tap targets for mobile */
+    a, button, .clickable {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Remove tap highlight */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* PWA Install Banner (Optional) */
+.pwa-install-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #008fd5 0%, #0066a1 100%);
+    color: white;
+    padding: 15px 20px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.pwa-install-banner.show {
+    display: flex;
+}
+
+.pwa-install-content {
+    flex: 1;
+}
+
+.pwa-install-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.pwa-install-content p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.pwa-install-btn {
+    background: white;
+    color: #008fd5;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.pwa-close-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+
+/* Standalone mode (when installed as PWA) */
+@media all and (display-mode: standalone) {
+    /* Hide browser-specific elements when running as PWA */
+    .browser-only {
+        display: none !important;
+    }
+    
+    /* Add safe area padding for notched devices */
+    body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+
+/* ===================================
+   REMOVE WHITE OVERLAY FROM BRAND LOGOS
+   =================================== */
+.client-carousel img {
+    opacity: 1 !important;
+}
+
+.client-carousel img:hover {
+    opacity: 0.8 !important;
+}
+
+/* ===================================
+   REDUCE BRAND SECTION HEIGHT
+   =================================== */
+.client-carousel.pt-40 {
+    padding-top: 40px !important;
+}
+
+.client-carousel.pb-40 {
+    padding-bottom: 40px !important;
+}
+
+.client-carousel .block-title {
+    margin-bottom: 50px !important;
+}
+
+@media (max-width: 767px) {
+    .client-carousel.pt-40 {
+        padding-top: 30px !important;
+    }
+    
+    .client-carousel.pb-40 {
+        padding-bottom: 30px !important;
+    }
+    
+    .client-carousel .block-title {
+        margin-bottom: 35px !important;
+    }
+}
+
+
+/* ===================================
+   DEVELOPER CREDIT IN FOOTER
+   =================================== */
+.bottom-footer p a {
+    color: #ffa500 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.bottom-footer p a:hover {
+    color: #ff8c00 !important;
+    text-decoration: underline !important;
+}
