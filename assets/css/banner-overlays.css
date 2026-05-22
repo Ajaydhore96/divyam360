@@ -754,3 +754,51 @@
     color: #ff8c00 !important;
     text-decoration: underline !important;
 }
+
+
+/* ===================================
+   HIDE TESTIMONIAL PLACEHOLDER IMAGES
+   =================================== */
+.testimonials-one__box-info {
+    display: none !important;
+}
+
+.testimonials-one__box {
+    margin-bottom: 0 !important;
+}
+
+
+/* ===================================
+   PRELOADER TEXT
+   =================================== */
+.preloader__text {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    animation: fadeInOut 2s ease-in-out infinite;
+    white-space: nowrap;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .preloader__text {
+        font-size: 18px;
+        bottom: 25%;
+        padding: 0 20px;
+        white-space: normal;
+    }
+}
