@@ -802,3 +802,48 @@
         white-space: normal;
     }
 }
+
+
+/* ===================================
+   BLUR TEXT ANIMATION - ABOUT PAGE HEADING
+   (Replicates React BlurText component)
+   =================================== */
+.page-header__blur-title {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0 !important;
+}
+
+.page-header__blur-title .blur-word {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-50px);
+    will-change: transform, filter, opacity;
+    animation: blurWordIn 0.7s ease forwards;
+    color: #ffffff;
+}
+
+/* Only "Divyam360" (2nd word) gets brand blue color */
+.page-header__blur-title .blur-word:nth-child(2) {
+    color: #008fd5;
+    text-shadow: 0 0 20px rgba(0, 143, 213, 0.6);
+}
+
+@keyframes blurWordIn {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: 0.5;
+        filter: blur(5px);
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0px);
+    }
+}
