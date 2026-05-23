@@ -6,7 +6,8 @@
     <title>Coming Soon — Divyam360 Tax & Insurance</title>
     <meta name="description" content="Divyam360 Tax & Insurance Services — Coming Soon">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <!-- Font Awesome via CDN — no local files needed -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -117,11 +118,8 @@
         }
 
         /* ── Logo ── */
-        .logo img {
-            max-width: 140px;
-            height: auto;
-            margin-bottom: 14px;
-            filter: brightness(1.1);
+        .logo {
+            margin-bottom: 18px;
         }
 
         /* ── Badge ── */
@@ -381,7 +379,10 @@
 
         <!-- Logo -->
         <div class="logo">
-            <img src="assets/images/logowhite.png" alt="Divyam360">
+            <div style="font-size:28px; font-weight:800; color:#ffffff; letter-spacing:2px; margin-bottom:4px;">
+                Divyam<span style="color:#008fd5;">360</span>
+            </div>
+            <div style="font-size:12px; color:rgba(255,255,255,0.5); letter-spacing:3px; text-transform:uppercase;">Tax &amp; Insurance Services</div>
         </div>
 
         <!-- Badge -->
